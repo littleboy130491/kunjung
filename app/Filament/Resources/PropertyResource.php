@@ -238,8 +238,7 @@ class PropertyResource extends Resource
                         CuratorPicker::make('photo_urls')
                             ->label('Additional Photos')
                             ->buttonLabel('Select Photos')
-                            ->multiple()
-                            ->reorderable(),
+                            ->multiple(),
                     ])
                     ->columns(2),
                 
@@ -358,13 +357,23 @@ class PropertyResource extends Resource
                     ])
                     ->multiple(),
                 SelectFilter::make('city')
-                    ->relationship('city', 'city')
-                    ->searchable()
-                    ->preload(),
+                    ->options(function () {
+                        return \App\Models\Property::select('city')
+                            ->distinct()
+                            ->whereNotNull('city')
+                            ->pluck('city', 'city')
+                            ->toArray();
+                    })
+                    ->searchable(),
                 SelectFilter::make('region')
-                    ->relationship('region', 'region')
-                    ->searchable()
-                    ->preload(),
+                    ->options(function () {
+                        return \App\Models\Property::select('region')
+                            ->distinct()
+                            ->whereNotNull('region')
+                            ->pluck('region', 'region')
+                            ->toArray();
+                    })
+                    ->searchable(),
                 SelectFilter::make('host_id')
                     ->label('Host')
                     ->relationship('host', 'name')

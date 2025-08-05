@@ -61,14 +61,10 @@ class UserResource extends Resource
                     ->schema([
                         CuratorPicker::make('profile_photo_url')
                             ->label('Profile Photo')
-                            ->buttonLabel('Select Photo')
-                            ->color('primary')
-                            ->size('md'),
+                            ->buttonLabel('Select Photo'),
                         CuratorPicker::make('avatar_url')
                             ->label('Avatar')
-                            ->buttonLabel('Select Avatar')
-                            ->color('secondary')
-                            ->size('sm'),
+                            ->buttonLabel('Select Avatar'),
                     ])
                     ->columns(2),
                 
