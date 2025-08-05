@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Bash(find:*)",
+      "Bash(ls:*)",
+      "Bash(pdftotext:*)",
+      "Bash(composer:*)",
+      "Bash(/c/Users/user/.config/herd/bin/composer.bat require filament/filament)",
+      "Bash(\"/c/Users/user/.config/herd/bin/composer.bat\" require filament/filament)",
+      "Bash(\"C:\\Users\\user\\.config\\herd\\bin\\composer.bat\" require filament/filament)"
+    ],
+    "deny": []
+  }
+}
