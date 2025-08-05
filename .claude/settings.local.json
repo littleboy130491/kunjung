@@ -8,7 +8,20 @@
       "Bash(composer:*)",
       "Bash(/c/Users/user/.config/herd/bin/composer.bat require filament/filament)",
       "Bash(\"/c/Users/user/.config/herd/bin/composer.bat\" require filament/filament)",
-      "Bash(\"C:\\Users\\user\\.config\\herd\\bin\\composer.bat\" require filament/filament)"
+      "Bash(\"C:\\Users\\user\\.config\\herd\\bin\\composer.bat\" require filament/filament)",
+      "Bash(php artisan filament:install:*)",
+      "Bash(\"C:\\Users\\user\\.config\\herd\\bin\\php.bat\" artisan filament:install --panels)",
+      "Bash(\"C:\\Users\\user\\.config\\herd\\bin\\php.bat\" artisan make:filament-resource User)",
+      "Bash(\"C:\\Users\\user\\.config\\herd\\bin\\php.bat\" artisan make:filament-resource Property)",
+      "Bash(\"C:\\Users\\user\\.config\\herd\\bin\\php.bat\" artisan make:filament-resource Booking)",
+      "Bash(\"C:\\Users\\user\\.config\\herd\\bin\\php.bat\" artisan make:filament-resource Review)",
+      "Bash(\"C:\\Users\\user\\.config\\herd\\bin\\php.bat\" artisan make:filament-resource Amenity)",
+      "Bash(\"C:\\Users\\user\\.config\\herd\\bin\\php.bat\" artisan make:filament-resource PaymentTransaction)",
+      "Bash(\"C:\\Users\\user\\.config\\herd\\bin\\php.bat\" artisan make:filament-resource PropertyAvailability)",
+      "Bash(\"C:\\Users\\user\\.config\\herd\\bin\\php.bat\" artisan make:filament-resource LocalGuide)",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__get-library-docs",
+      "Bash(\"C:\\Users\\user\\.config\\herd\\bin\\php.bat\" artisan migrate:fresh)"
     ],
     "deny": []
   }

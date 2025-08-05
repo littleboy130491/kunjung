@@ -41,22 +41,28 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn([
-                'phone',
-                'date_of_birth',
-                'gender',
-                'bio',
-                'location',
-                'is_host_verified',
-                'host_verification_status',
-                'host_document_path',
-                'response_rate',
-                'response_time_hours',
-                'last_active_at',
-                'profile_photo_url',
-                'avatar_url',
-            ]);
-        });
+        // SQLite doesn't support dropping columns easily
+        // For development, use: php artisan migrate:fresh
+        // For production, would need to recreate table
+        
+        if (config('database.default') !== 'sqlite') {
+            Schema::table('users', function (Blueprint $table) {
+                $table->dropColumn([
+                    'phone',
+                    'date_of_birth',
+                    'gender',
+                    'bio',
+                    'location',
+                    'is_host_verified',
+                    'host_verification_status',
+                    'host_document_path',
+                    'response_rate',
+                    'response_time_hours',
+                    'last_active_at',
+                    'profile_photo_url',
+                    'avatar_url',
+                ]);
+            });
+        }
     }
 };

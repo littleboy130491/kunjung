@@ -98,7 +98,10 @@ return new class extends Migration
             $table->index(['latitude', 'longitude']);
             $table->index('base_price_per_night');
             $table->index('average_rating');
-            $table->fullText(['title', 'description', 'location']);
+            // Note: SQLite doesn't support fulltext indexes
+            // Use regular indexes for basic search performance
+            $table->index('title');
+            $table->index('location');
         });
     }
 
